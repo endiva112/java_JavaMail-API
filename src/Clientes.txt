@@ -1,0 +1,3 @@
+cliente1@gmail.com
+cliente2@hotmail.com
+cliente3@yahoo.com
