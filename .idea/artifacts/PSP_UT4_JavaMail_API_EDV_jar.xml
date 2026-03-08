@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PSP_UT4-JavaMail-API_EDV:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PSP_UT4_JavaMail_API_EDV_jar</output-path>
+    <root id="archive" name="PSP_UT4-JavaMail-API_EDV.jar">
+      <element id="module-output" name="PSP_UT4-JavaMail-API_EDV" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javax.mail.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/activation-1.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

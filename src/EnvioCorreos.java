@@ -29,7 +29,7 @@ public class EnvioCorreos {
             System.out.println("Error: No se encontraron destinatarios en Clientes.txt. Saliendo...");
             return;
         }
-        System.out.println("✅ " + destinatarios.size() + " destinatario(s) cargados.\n");
+        System.out.println("(OK) " + destinatarios.size() + " destinatario(s) cargados.\n");
 
         // 3. Leer mensaje
         String mensaje = leerMensaje("Mensaje.txt");
@@ -37,7 +37,7 @@ public class EnvioCorreos {
             System.out.println("Error: El archivo Mensaje.txt está vacío o no existe. Saliendo...");
             return;
         }
-        System.out.println("✅ Mensaje cargado correctamente.\n");
+        System.out.println("(OK) Mensaje cargado correctamente.\n");
 
         // 4. Enviar correos
         enviarCorreo(emailUsuario, claveUsuario, destinatarios, mensaje);
@@ -158,22 +158,22 @@ public class EnvioCorreos {
 
                 Transport.send(email);
 
-                System.out.println("✅ Correo enviado a: " + destinatario);
+                System.out.println("(OK) Correo enviado a: " + destinatario);
                 enviados++;
 
             } catch (MessagingException e) {
-                System.out.println("❌ Error al enviar a " + destinatario + ": " + e.getMessage());
+                System.out.println("(ERROR) Error al enviar a " + destinatario + ": " + e.getMessage());
                 errores++;
             } catch (Exception e) {
-                System.out.println("❌ Error inesperado con " + destinatario + ": " + e.getMessage());
+                System.out.println("(ERROR) Error inesperado con " + destinatario + ": " + e.getMessage());
                 errores++;
             }
         }
 
         System.out.println("\n==========================================");
         System.out.println("  Resumen del envío:");
-        System.out.println("  ✅ Enviados correctamente : " + enviados);
-        System.out.println("  ❌ Errores                : " + errores);
+        System.out.println("  (OK) Enviados correctamente : " + enviados);
+        System.out.println("  (ERROR) Errores                : " + errores);
         System.out.println("==========================================");
     }
 }
